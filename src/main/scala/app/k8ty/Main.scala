@@ -35,7 +35,7 @@ object Main extends App {
       val kv = secrets.map { key =>
         print(s"$key: ")
         val value = readLine()
-        key -> Base64.getUrlEncoder.withoutPadding().encodeToString(value.getBytes)
+        key -> Base64.getUrlEncoder.encodeToString(value.getBytes)
       }.filter(_._2.nonEmpty)
 
       println {
